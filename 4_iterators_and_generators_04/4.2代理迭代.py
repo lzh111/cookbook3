@@ -25,7 +25,7 @@ class Node:
 
     def __iter__(self):
         """将迭代请求传递给self._children"""
-        return iter(self._children)
+        return self._children.__iter__()  # iter(self._children) iter方法底层就是调用__iter__()方法
 
 
 if __name__ == '__main__':

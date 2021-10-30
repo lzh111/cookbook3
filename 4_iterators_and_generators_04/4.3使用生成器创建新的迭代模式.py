@@ -11,6 +11,7 @@
 
 """
 
+
 # 一个函数中有yield 可以将其转换成生成器，生成器只能用于迭代操作
 def frange(start, stop, increment):
     """生成某个范围内的浮点数"""
@@ -18,6 +19,7 @@ def frange(start, stop, increment):
     while x < stop:
         yield x
         x += increment
+
 
 for i in frange(0, 4, 0.5):
     print(i)
@@ -28,9 +30,10 @@ def countdown(n):
         yield n
         n -= 1
     print('Done')
+
+
 c = countdown(3)
 print(next(c))
 print(next(c))
 print(next(c))
 print(next(c))
-
